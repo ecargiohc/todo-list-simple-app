@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import NewTodoForm from './NewTodoForm';
 import Todo from './Todo';
-// import "./TodoList.css";
+import "./TodoList.css";
 
 // parent/container holds all state
 class TodoList extends Component {
@@ -65,7 +65,8 @@ class TodoList extends Component {
             toggleCompletion={this.toggleCompletion}
             />)
         return(
-            <div>
+            <div className="TodoList">
+                
                 <NewTodoForm createTodo={this.create}/>
                 {todos}
             </div>

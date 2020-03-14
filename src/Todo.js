@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Todo.css';
+// import './Todo.css';
 
 class Todo extends Component {
 // presentational; displays <div> with the task of the todo
