@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import './Todo.css';
+import './Todo.css';
 
 class Todo extends Component {
 // presentational; displays <div> with the task of the todo
@@ -54,7 +54,7 @@ class Todo extends Component {
         let result;
         if (this.state.isEditing) {
             result = (
-                <div>
+                <div className="Todo">
                     <form onSubmit={this.handleEdit}>
                         <input 
                         onChange={this.handleChange}
@@ -68,7 +68,7 @@ class Todo extends Component {
         } else {
              result = (
              <div className="Todo">
-                <li className={this.props.completed ? "completed" : ""}
+                <li className={this.props.completed ? "Todo-task completed" : "Todo-task"}
                 onClick={this.handleToggle}
                 >{this.props.todo}
                 {/* OR {this.props.completed && "Completed"} does same logic conditional */}
